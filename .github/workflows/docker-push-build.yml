@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN}} # use secret for Docker password
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAM}}/my-repo-name:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME}}/my-repo-name:latest .
         # build the Docker image with a tag
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME}}/my-repo-name:latest
